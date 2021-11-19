@@ -1,0 +1,38 @@
+<div class="course-authors__input-caption">
+  <div class="course-authors__input-caption_title">Authors:</div>
+  <div class="course-authors__input-caption_error" *ngIf="authors.hasError('required')">
+    This field is required.
+  </div>
+  <div class="course-authors__input-caption_required">*required</div>
+</div>
+<div>
+  <mat-form-field>
+    <mat-chip-list #courseAuthorsList required errorState>
+      <mat-chip 
+        *ngFor="let author of courseAuthors" 
+        [selectable]="selectable" 
+        [removable]="removable"
+        (removed)="remove(author)">
+        {{author.name}} {{author.lastName}}
+        <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+      </mat-chip>
+      <input 
+        matInput 
+        placeholder="Start typing" 
+        #authorsInput 
+        [formControl]="authors" 
+        [matChipInputFor]="courseAuthorsList" 
+        [matAutocomplete]="auto"
+        [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+        [matChipInputAddOnBlur]="addOnBlur" 
+        (matChipInputTokenEnd)="add($event)" 
+        (blur)="errors()"
+      />
+    </mat-chip-list>
+  </mat-form-field>
+  <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
+    <mat-option *ngFor="let author of authorsList" [value]="author.id">
+      {{author.name}}
+    </mat-option>
+  </mat-autocomplete>
+</div>

@@ -1,0 +1,162 @@
+@import '../shared/variables.scss';
+
+.add-course-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1280px;
+  height: $course-height;
+  background-color: $pale-grey-color;
+}
+
+.add-course {
+  width: 731px;
+  height: 700px;
+  border-radius: 8px;
+  box-shadow: 0 1px 24px 0 rgba(18, 21, 35, 0.08);
+  background-color: $white-color;
+
+  &__form {
+    padding: 24px;
+    height: 700px;
+  }
+
+  &__title {
+    margin-top: 0;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.25;
+    letter-spacing: normal;
+    color:$dark-color;
+  }
+
+  &__input-caption {
+    display: flex;
+    justify-content: space-between;
+
+    &_title {
+      font-family: "Source Sans Pro", sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: 0.22px;
+      color: $slate-grey;
+    }
+
+    &_required,
+    &_error {
+      font-family: "Source Sans Pro", sans-serif;
+      font-size: 12px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.5;
+      letter-spacing: 0.19px;
+      text-align: right;
+      color: $battleship-grey;
+    }
+
+    &_error { 
+      color: $orange-red;
+    }
+  }
+
+  &__input-wrapper {
+    width: 100%;
+    height: 36px;
+    margin: 9px 0 12px;
+    border-radius: 3px;
+    border: solid 1px $grey-color;
+
+    &_description {
+      height: 135px;
+    }
+  }
+
+  &__input {
+    width: 98%;
+    height: 96%;
+    padding-left: 12px;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2.30;
+    letter-spacing: 0.22px;
+    color: $slate-grey;
+    border: none;
+
+    &::placeholder {
+      font-family: "Source Sans Pro", sans-serif;
+      font-size: 14px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 2.30;
+      letter-spacing: 0.22px;
+      color: $silver;
+    }
+
+    &-error {
+      border: 1px solid $orange-red;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 24px;
+
+    &_cancel,
+    &_save {
+      width: 68px;
+      height: 36px;
+      margin-left: 12px;
+      border-radius: 3px;
+      border: none;
+      font-family: "Source Sans Pro", sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 2.57;
+      letter-spacing: -0.1px;
+      color: $cool-grey;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    &_save {
+      background-color: $sick-green;
+      color: $white-color;
+
+      &-disabled {
+        background-color: $lighter-grey;
+        color: $cool-grey;
+      }
+    }
+  }
+}
+
+.add-course-page {
+  display: flex;
+  height: $course-height;
+}
+  
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active  {
+  -webkit-box-shadow: 0 0 0 30px $white-color inset !important;
+}
+

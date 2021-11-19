@@ -1,0 +1,154 @@
+@import '../../shared/variables.scss';
+
+.course-item-wrapper {
+  display: flex;
+  width: 1110px;
+  height: 163px;
+  margin: 0 auto 24px;
+  border-radius: 8px;
+  box-shadow: 0 1px 24px 0 rgba(18, 21, 35, 0.08);
+  background-color: $white-color;
+  border: 1px solid $white-color;
+}
+
+.course-item-actions {
+  position: relative;
+  width: 300px;
+}
+
+.star-icon {
+  display: none;
+}
+
+.course-item {
+  width: 801px;
+  padding: 24px;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+
+    &_title {
+      display: flex;
+      align-items: center;
+      height: 30px;
+      font-family: "Source Sans Pro", sans-serif;
+      font-size: 24px;
+      font-weight: 600;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.25;
+      letter-spacing: normal;
+      color: $dark-color;
+    }
+
+    &_time {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &-duration,
+      &-date {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 15px;
+        font-family: "Source Sans Pro", sans-serif;
+        font-size: 12px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: $cloudy-blue;
+
+        .icon {
+          width: 14px;
+          height: 16px;
+          font-size: 16px;
+          margin: 0 8px;
+        }
+      }
+    }
+
+    &_description {
+      height: 77px;
+      margin-top: 5px;
+      font-family: "Source Sans Pro", sans-serif;
+      font-size: 14px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.71;
+      letter-spacing: normal;
+      color: $slate-grey;
+    }
+  }
+
+  &-top-rated {
+    background-color: $grey-color;
+
+    .star-icon {
+      display: block;
+      margin: 0 15px;
+      color: $yellow-color;
+      font-weight: bold;
+    }
+  }
+}
+
+.green {
+  border-color: $green-color;
+}
+
+.blue {
+  border-color: $blue-color;
+}
+
+.item-action {
+  display: flex;
+  align-items: center;
+  margin: 30px 0 0 60px;
+
+  &_buttons {
+    display: flex;
+    text-align: center;
+    width: 75px;
+    height: 24px;
+    margin-left: 12px;
+    border-radius: 3px;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.83;
+    letter-spacing: -0.09px;
+    color: $white-color;
+    background-color: $dark-sky-blue;
+
+    .icon {
+      font-size: 16px;
+      line-height: 23px;
+      margin-left: 8px;
+    }
+  }
+
+  &_btn {
+    border: none;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.83;
+    letter-spacing: -0.09px;
+    color: $white-color;
+    background-color: $dark-sky-blue;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

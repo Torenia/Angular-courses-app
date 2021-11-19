@@ -1,0 +1,14 @@
+<div class="course-page">
+  <app-search (filter)="filterDataBySearch($event)"></app-search>
+  <div class="course-page__add">
+    <div class="course-page__add-button">
+      <i class="material-icons icon">add</i>
+      <button class="course-page__add-button_btn" [routerLink]="['/courses/new']">Add course</button>
+    </div>
+  </div>
+  <app-course-item *ngFor="let item of courseItems | orderBy" [item]="item" (clickDelete)="deleteItemFromList($event)"></app-course-item>
+  <div *ngIf="!courseItems.length" class="course-page__empty">NO DATA, FEEL FREE TO ADD NEW COURSE</div>
+  <div class="course-page__load-more">
+    <button class="course-page__load-more_link" (click)="loadMoreItems()">LOAD MORE</button>
+  </div>
+</div>

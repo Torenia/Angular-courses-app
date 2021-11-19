@@ -1,0 +1,36 @@
+@import '../shared/variables.scss';
+
+.breadcrumbs {
+  height: $bread-crumbs-height;
+  margin: 0 auto;
+  background-color: $white-color;
+  display: flex;
+  align-items: center;
+
+  &:first-child {
+    margin-left: 85px;
+  }
+
+  &__list {
+    height: 24px;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.71;
+    letter-spacing: normal;
+    text-decoration: none;
+    color: $cool-grey;
+
+    &_new-course:before {
+      content: " / ";
+      padding: 0 10px;
+      color: $dark-sky-blue;
+    }
+
+    &_active {
+      color: $dark-color;
+    }
+  }
+}

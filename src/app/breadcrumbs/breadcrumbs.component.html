@@ -1,0 +1,8 @@
+<div class="breadcrumbs">
+  <a [routerLink]="['/courses']" class="breadcrumbs__list" [routerLinkActive]="['breadcrumbs__list_active']"
+     [routerLinkActiveOptions]="{ exact: true }">Courses</a>
+  <a [routerLink]="" class="breadcrumbs__list breadcrumbs__list_new-course breadcrumbs__list_active"
+     *ngIf="router.url === '/courses/new'">New Course</a>
+  <a [routerLink]="" class="breadcrumbs__list breadcrumbs__list_new-course breadcrumbs__list_active"
+     *ngIf="isEditCoursePageActive">{{item.name}}</a>
+</div>

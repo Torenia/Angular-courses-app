@@ -1,0 +1,26 @@
+$white-color: #fff;
+$bg-color: #414452;
+$dark-color: #2c2f3c;
+$pale-grey-color: #f2f3f7;
+$grey-color: #d9dbe3;
+$sick-green: #9bc837;
+$silver: #c0c3ce;
+$slate-grey: #525462;
+$cloudy-blue: #b9bdce;
+$dark-sky-blue: #30b6dd;
+$soft-blue: #577ce6;
+$green-color: #008000;
+$blue-color: #0000ff;
+$yellow-color: #f6ff0e;
+$light-grey-color: #eaedf5;
+$battleship-grey: #6c7283;
+$soft-blue-two: #5681ee;
+$cool-grey: #a8a9b4;
+$orange-red: #ff4e33;
+$lighter-grey: #f0f0f0;
+
+$header-height: 64px;
+$footer-height: 88px;
+$bread-crumbs-height: 64px;
+
+$course-height: calc(100vh - #{$header-height + $footer-height + $bread-crumbs-height});

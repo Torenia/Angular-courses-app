@@ -1,0 +1,151 @@
+@import '../shared/variables.scss';
+
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1280px;
+  background-color: $pale-grey-color;
+}
+
+.login {
+  width: 368px;
+  height: 298px;
+  border-radius: 6px;
+  box-shadow: 0 1px 24px 0 rgba(18, 21, 35, 0.08);
+  background-color: $white-color;
+
+  &__form {
+    padding: 24px;
+  }
+
+  &__title {
+    margin-top: 0;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.25;
+    letter-spacing: normal;
+    color:$dark-color;
+  }
+
+  &__input-caption {
+    display: flex;
+    justify-content: space-between;
+
+    &_mail {
+      font-family: "Source Sans Pro", sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: 0.22px;
+      color: $slate-grey;
+    }
+
+    &_required {
+      font-family: "Source Sans Pro", sans-serif;
+      font-size: 12px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.5;
+      letter-spacing: 0.19px;
+      text-align: right;
+      color: $battleship-grey;
+    }
+  }
+
+  &__input-wrapper {
+    width: 320px;
+    height: 36px;
+    margin: 9px 0 12px;
+    border-radius: 3px;
+    border: solid 1px $grey-color;
+  }
+
+  &__input {
+    width: 96%;
+    height: 96%;
+    padding-left: 12px;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2.30;
+    letter-spacing: 0.22px;
+    color: $silver;
+    border: none;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+
+    &_link {
+      font-family: "Source Sans Pro", sans-serif;
+      font-size: 12px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.5;
+      letter-spacing: 0.19px;
+      color: $soft-blue-two;
+      background-color: $white-color;
+
+      &:active {
+        outline: none;
+        border: none;
+        background-color: $white-color;
+      }
+
+      &:focus {
+        outline: none;
+        border: none;
+        background-color: $white-color;
+      }
+    }
+
+    &_login {
+      width: 68px;
+      height: 36px;
+      border-radius: 3px;
+      border: none;
+      font-family: "Source Sans Pro", sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 2.57;
+      letter-spacing: -0.1px;
+      color: $cool-grey;
+
+      &:focus {
+        outline: none;
+      }
+
+      &-active {
+        background-color: $sick-green;
+        color: $white-color;
+      }
+    }
+  }
+}
+
+.login-page {
+  display: flex;
+  height: 87vh;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active  {
+  -webkit-box-shadow: 0 0 0 30px $white-color inset !important;
+}

@@ -1,0 +1,21 @@
+@import '../shared/variables.scss';
+
+.not-found-page {
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.25;
+  letter-spacing: normal;
+  color: $dark-color;
+
+  &__404 {
+    font-size: 100px;
+    color: $grey-color;
+  }
+}

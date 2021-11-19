@@ -1,0 +1,28 @@
+<div class="course-item-wrapper" appCourseBorderColor [creationDate]='item.date'
+     [ngClass]="{'course-item-top-rated' : item.isTopRated}">
+  <div class="course-item">
+    <div class="course-item__header">
+      <div class="course-item__header_title">{{item.name | uppercase}}
+        <div><i class="material-icons star-icon">star_border</i></div>
+      </div>
+      <div class="course-item__header_time">
+        <div class="course-item__header_time-duration">
+          <i class="material-icons icon">access_time</i>{{item.length | timeDuration}}
+        </div>
+        <div class="course-item__header_time-date"><i
+          class="material-icons icon">event_note</i>{{item.date | date}}</div>
+      </div>
+    </div>
+    <div class="course-item__header_description">{{item.description}}</div>
+  </div>
+  <div class="item-action">
+    <div class="item-action_buttons">
+      <i class="material-icons icon">create</i>
+      <button class="item-action_btn" [routerLink]="['/courses/', item.id]">Edit</button>
+    </div>
+    <div class="item-action_buttons">
+      <i class="material-icons icon">delete</i>
+      <button class="item-action_btn delete" (click)="openModal(item.id)">Delete</button>
+    </div>
+  </div>
+</div>

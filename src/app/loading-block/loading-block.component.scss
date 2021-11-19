@@ -1,0 +1,41 @@
+@import '../shared/variables.scss';
+
+.hidden {
+  visibility: hidden;
+}
+
+.loader-overlay {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+.loader {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+
+.loader:after {
+  position: fixed;
+  right: 50%;
+  top: 40%;
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid $blue-color;
+  border-color: $blue-color transparent blue transparent;
+  animation: loader 1.2s linear infinite;
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

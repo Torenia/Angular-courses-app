@@ -1,0 +1,54 @@
+@import '../../shared/variables.scss';
+
+.search {
+  height: 100px;
+  margin-left: 85px;
+  display: flex;
+  align-items: center;
+
+  &__input{
+    width: 360px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    border-radius: 3px;
+    border: solid 1px $grey-color;
+    background-color: $white-color;
+
+    &_img {
+      padding: 12px;
+    }
+
+    &_field {
+      border: none;
+      width: 200px;
+      height: 20px;
+      font-family: "Source Sans Pro", sans-serif;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  &__btn {
+    width: 100px;
+    height: 48px;
+    margin-left: 6px;
+    border-radius: 3px;
+    border: none;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 18px;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2.56;
+    letter-spacing: -0.13px;
+    color: $white-color;
+    background-color: $sick-green;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+<button class="login-btn" routerLink="/login-page">
+  <img src="../../../assets/ic-user.png"
+       srcset="../../../assets/ic-user@2x.png 2x, ../../../assets/ic-user@2x.png 3x"
+       alt="login"
+       class="login-img">
+  <span class="login-text" *ngIf="!login">User login</span>
+  <span class="login-text" *ngIf="login">{{login}}</span>
+</button>
+

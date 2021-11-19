@@ -1,0 +1,28 @@
+@import '../shared/variables.scss';
+
+.header {
+    margin: 0 auto;
+    height: $header-height;
+    background-color: $bg-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__logo {
+        width: 140px;
+        height: 64px;
+        object-fit: contain;
+        margin-left: 85px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    &__user {
+        height: 18px;
+        margin-right: 85px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

@@ -1,0 +1,23 @@
+<div class="course-date__input-caption course-date__input-caption_time">
+  <div class="course-date__input-caption_title">Date:</div>
+  <div class="course-date__input-caption_required">*required</div>
+</div>
+<div class="course-date__wrapper">
+  <div class="course-date__input-wrapper course-date__input-wrapper_time course-date__input-wrapper_creationDate"
+    [ngClass]="{'course-date__input-error' : date.hasError('required') && date.touched }">
+    <input 
+      type="text" 
+      placeholder="mm-dd-yyyy" 
+      class="course-date__input" 
+      [formControl]="date" 
+      (change)="onChange()" 
+    />
+    <i class="material-icons icon">event_note</i>
+  </div>
+  <div class="course-date__input-caption_error" *ngIf="date.hasError('required') && date.touched">
+    This field is required.
+  </div>
+  <div class="course-date__input-caption_error" *ngIf="date.hasError('pattern') && date.touched">
+    The date format should be dd/mm/yyyy.
+  </div>
+</div>

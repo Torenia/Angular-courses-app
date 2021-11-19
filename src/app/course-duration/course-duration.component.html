@@ -1,0 +1,29 @@
+<div class="course-duration__input-caption course-duration__input-caption_time">
+  <div class="course-duration__input-caption_title">Duration:</div>
+  <div class="course-duration__input-caption_required">*required</div>
+</div>
+<div class="course-duration__input-duration">
+  <div 
+    class="course-duration__input-wrapper course-duration__input-wrapper_time" 
+    [ngClass]="{'course-duration__input-error' 
+        : (length.hasError('required') || length.hasError('pattern')) 
+        && length.touched}"
+  >
+    <input 
+      type="text" 
+      placeholder="minutes" 
+      class="course-duration__input" 
+      [formControl]="length"
+      (change)="onChange()" 
+    />
+  </div>
+  <div class="course-duration__duration" *ngIf="length.value && !length.hasError('pattern')">
+    {{length.value | timeDuration}}
+  </div>
+  <div class="course-duration__input-caption_error" *ngIf="length.hasError('required') && length.touched">
+    This field is required.
+  </div>
+  <div class="course-duration__input-caption_error" *ngIf="length.hasError('pattern') && length.touched">
+    Сourse duration should be a number and should not start at 0.
+  </div>
+</div>
