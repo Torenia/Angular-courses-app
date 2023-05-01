@@ -1,0 +1,31 @@
+@import '../../shared/variables.scss';
+
+.login-btn {
+  background-color: $bg-color;
+  border: none;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.login-img {
+    width: 10px;
+    height: 12px;
+    margin-right: 9px;
+}
+
+.login-text {
+    width: 59px;
+    height: 14px;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: right;
+    color: $white-color;
+}

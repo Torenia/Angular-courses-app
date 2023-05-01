@@ -1,0 +1,103 @@
+@import '../shared/variables.scss';
+
+.course-authors {
+
+  &__title {
+    margin-top: 0;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.25;
+    letter-spacing: normal;
+    color:$dark-color;
+  }
+
+  &__input-caption {
+    width: 312px;
+    display: flex;
+    justify-content: space-between;
+
+    &_title {
+      font-family: "Source Sans Pro", sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: 0.22px;
+      color: $slate-grey;
+    }
+
+    &_required,
+    &_error {
+      font-family: "Source Sans Pro", sans-serif;
+      font-size: 12px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.5;
+      letter-spacing: 0.19px;
+      text-align: right;
+      color: $battleship-grey;
+    }
+
+    &_error { 
+      color: $orange-red;
+    }
+  }
+
+  &__input-wrapper {
+    width: 312px;
+    height: 36px;
+    margin: 9px 0 12px;
+    border-radius: 3px;
+    border: solid 1px $grey-color;
+
+    &_authors {
+      width: 312px;
+    }
+  }
+
+  &__input {
+    width: 96%;
+    height: 94%;
+    padding-left: 12px;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2.30;
+    letter-spacing: 0.22px;
+    color: $slate-grey;
+    border: none;
+
+    &::placeholder {
+      font-family: "Source Sans Pro", sans-serif;
+      font-size: 14px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 2.30;
+      letter-spacing: 0.22px;
+      color: $silver;
+    }
+
+    &-error {
+      border: 1px solid $orange-red;
+    }
+  }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active  {
+  -webkit-box-shadow: 0 0 0 30px $white-color inset !important;
+}
+
+.mat-form-field {
+  width: 680px;
+}

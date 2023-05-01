@@ -1,0 +1,106 @@
+@import '../shared/variables.scss';
+
+.course-page {
+  margin: 0 auto;
+  background-color: $pale-grey-color;
+  padding-bottom: 65px;
+
+  &__add {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 85px 12px 0;
+
+    &-button {
+      display: flex;
+      text-align: center;
+      width: 138px;
+      height: 36px;
+      border-radius: 3px;
+      font-family: "Source Sans Pro", sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 2.57;
+      letter-spacing: -0.1px;
+      color: $white-color;
+      background-color: $dark-sky-blue;
+
+      .icon {
+        width: 18px;
+        height: 18px;
+        font-size: 24px;
+        line-height: 34px;
+        margin: 0 10px;
+      }
+
+      &_btn {
+        border: none;
+        font-family: "Source Sans Pro", sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 2.57;
+        letter-spacing: -0.1px;
+        color: $white-color;
+        background-color: $dark-sky-blue;
+        cursor: pointer;
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+
+  &__load-more {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 1110px;
+    height: 48px;
+    margin: 0 auto;
+    border-radius: 6px;
+    box-shadow: 0 1px 24px 0 rgba(18, 21, 35, 0.08);
+    background-color: $white-color;
+
+    &_link {
+      font-family: "Source Sans Pro", sans-serif;
+      font-size: 12px;
+      line-height: 45px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      letter-spacing: 0.19px;
+      color: $soft-blue;
+      background-color: $white-color;
+      border: none;
+      text-decoration: underline;
+      cursor: pointer;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  &__empty {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 1110px;
+    height: 48px;
+    margin: 20px auto;
+    border-radius: 6px;
+    box-shadow: 0 1px 24px 0 rgba(18, 21, 35, 0.08);
+    background-color: $white-color;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 16px;
+    line-height: 50px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: 0.19px;
+  }
+}

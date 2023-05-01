@@ -1,0 +1,14 @@
+<div class="search">
+  <div class="search__input">
+    <div class="search__input_img">
+      <img src="../../../assets/ic-search.png"
+           srcset="../../../assets/ic-search@2x.png 2x, ../../../assets/ic-search@2x.png 3x"
+           alt="login">
+    </div>
+    <div>
+      <input (input)="onSearchChange.next($event.target.value)" type="text" placeholder="Text to search"
+             class="search__input_field"
+             name="searchText">
+    </div>
+  </div>
+</div>

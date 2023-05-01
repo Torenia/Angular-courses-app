@@ -1,0 +1,28 @@
+@import '../shared/variables.scss';
+
+.footer {
+  width: 1280px;
+  margin: 0 auto;
+  height: $footer-height;
+  background-color: $bg-color;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+
+  &__copyright {
+    margin-right: 85px;
+    width: 266px;
+    height: 24px;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.71;
+    letter-spacing: normal;
+    text-align: right;
+    color: $silver;
+  }
+}

@@ -1,0 +1,91 @@
+@import '../../shared/variables.scss';
+
+.modal {
+  width: 394px;
+  border-radius: 6px;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 54px;
+    margin: -24px -24px 24px -24px;
+    background-color: $light-grey-color;
+  }
+
+  &__title {
+    width: 129.2px;
+    height: 54px;
+    margin: 0 0 0 24px;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2.80;
+    letter-spacing: 0.1px;
+    color: $slate-grey;
+  }
+
+  &__close-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 24px;
+    object-fit: contain;
+    background-color: $light-grey-color;
+    border: none;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__text {
+    width: 184px;
+    height: 48px;
+    margin-bottom: 24px;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.71;
+    letter-spacing: normal;
+    color: $slate-grey;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: flex-end;
+
+    &_cancel {
+      width: 76px;
+      height: 36px;
+      border-radius: 3px;
+      background-color: $grey-color;
+      font-family: "Source Sans Pro", sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 2.43;
+      letter-spacing: -0.1px;
+      color: $slate-grey;
+    }
+
+    &_confirm {
+      width: 99px;
+      height: 36px;
+      border-radius: 3px;
+      background-color: $sick-green;
+      font-family: "Source Sans Pro", sans-serif;
+      font-size: 14px;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 2.43;
+      letter-spacing: -0.1px;
+      color: $white-color;
+    }
+  }
+}

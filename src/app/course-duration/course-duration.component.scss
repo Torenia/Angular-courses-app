@@ -1,0 +1,111 @@
+@import '../shared/variables.scss';
+
+.course-duration {
+  
+  &__input-caption {
+    display: flex;
+    justify-content: space-between;
+
+    &_time {
+      width: 150px;
+    }
+
+    &_title {
+      font-family: "Source Sans Pro", sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: 0.22px;
+      color: $slate-grey;
+    }
+
+    &_required,
+    &_error {
+      font-family: "Source Sans Pro", sans-serif;
+      font-size: 12px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.5;
+      letter-spacing: 0.19px;
+      text-align: right;
+      color: $battleship-grey;
+    }
+
+    &_error { 
+      color: $orange-red;
+      margin-left: 20px;
+    }
+  }
+
+  &__input-wrapper {
+    width: 100%;
+    height: 36px;
+    margin: 9px 0 12px;
+    border-radius: 3px;
+    border: solid 1px $grey-color;
+
+    &_time {
+      width: 150px;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__input {
+    width: 96%;
+    height: 96%;
+    padding-left: 12px;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2.30;
+    letter-spacing: 0.22px;
+    color: $slate-grey;
+    border: none;
+
+    &::placeholder {
+      font-family: "Source Sans Pro", sans-serif;
+      font-size: 14px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 2.30;
+      letter-spacing: 0.22px;
+      color: $silver;
+    }
+
+    &-duration {
+      display: flex;
+      align-items: center;
+    }
+
+    &-error {
+      border: 1px solid $orange-red;
+    }
+  }
+
+  &__duration {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2.30;
+    letter-spacing: 0.22px;
+    color: $slate-grey;
+    margin-left: 20px;
+  }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active  {
+  -webkit-box-shadow: 0 0 0 30px $white-color inset !important;
+}
+

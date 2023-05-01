@@ -1,0 +1,42 @@
+<div class="login-page">
+<form class="login-wrapper" [formGroup]="loginForm" (ngSubmit)="loginUser()">
+  <div class="login">
+    <div class="login__form">
+      <h2 class="login__title">Login</h2>
+      <div class="login__input-caption">
+        <div class="login__input-caption_mail">E-mail:</div>
+        <div class="login__input-caption_required">*required</div>
+      </div>
+      <div class="login__input-wrapper">
+        <input 
+          type="login" 
+          placeholder="Enter e-mail" 
+          class="login__input" 
+          name="email"  
+          formControlName="login"
+        >
+      </div>
+      <div class="login__input-caption">
+        <div class="login__input-caption_mail">Password:</div>
+        <div class="login__input-caption_required">*required</div>
+      </div>
+      <div class="login__input-wrapper">
+        <input 
+          type="password" 
+          placeholder="Enter password" 
+          class="login__input" 
+          formControlName="password"
+        >
+      </div>
+      <div class="login__actions">
+        <a href="#" class="login__actions_link">Forgot password?</a>
+        <button 
+          class="login__actions_login" 
+          [ngClass]="{ 'login__actions_login-active': loginForm.valid }"
+          [disabled]="!loginForm.valid"
+        >Login</button>
+      </div>
+    </div>
+  </div>
+</form>
+</div>
